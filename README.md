@@ -1,93 +1,67 @@
-# Data Structures Implementation: Stack and Message Queue
-*A Python implementation of Stack and Message Queue using linked list data structure*
+[README.md](https://github.com/user-attachments/files/22574474/README.md)
+# OOPS — Projects Organized by Folder
+This repository contains several small Python projects (data structures and small demos) organized into top-level folders. This README shows what lives where and how to run each component.
 
-## Overview
-This repository contains two main implementations:
-1. **Stack with Parentheses Checker**: A linked list-based stack implementation with a parentheses balancing checker
-2. **Message Queue**: A linked list-based message queue implementation with a simple console interface
+## Repository layout
+- `smarthome/` — Smart Home model and GUI
+	- `smarthome.py` — device models and CLI
+	- `ui.smarthome.py` — Tkinter desktop GUI
+- `stack/` — Stack implementations and exercises
+	- `stack_linked_list.py` — linked-list-based Stack + parentheses checker
+	- `stackproblem.py` — original stack/assignment file
+- `messagingqueue/` — Message queue implementation
+	- `messagingqueue.py`
+- `bankaccount/` — `bankaccount.py` (bank account example)
+- `tvmodel/` — `tvmodel.py` (TV model example)
+- `pacman/` — `pacman.1.py` (game example)
+- `README.md`, `LICENSE` — repo docs and license
 
-## Stack Implementation (`stack_linked_list.py`)
-### Features
-- Linked list-based stack implementation
-- Basic stack operations: push, pop, peek
-- Size tracking and empty state checking
-- Parentheses balancing checker utility
-- Supports (), [], and {} brackets
-
-### Usage Example
-```python
-# Create a new stack
-stack = Stack()
-
-# Check if parentheses are balanced
-expression = "([{}])"
-result = are_parentheses_balanced(expression)
-print(f"'{expression}' is balanced: {result}")  # True
-```
-
-## Message Queue Implementation (`messagingqueue.py`)
-### Features
-- Linked list-based queue implementation
-- Basic queue operations: enqueue, dequeue
-- Queue display functionality
-- Interactive console interface
-- Size tracking and empty state checking
-
-### Usage Example
-```python
-# Create a new message queue
-mq = MessageQueue()
-
-# Enqueue a message
-mq.enqueue("Hello World!")
-
-# Dequeue a message
-message = mq.dequeue()
-
-# Display current queue
-print(mq.display_queue())
-```
-
-## Installation
+## Quick start
 1. Clone the repository:
-```bash
+```powershell
 git clone https://github.com/rahul200618/OOPS.git
-```
-
-2. Navigate to the project directory:
-```bash
 cd OOPS
 ```
 
-## How to Run
-### Stack Implementation
-```bash
-python stack_linked_list.py
+2. (Optional) Create and activate a virtual environment:
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
 ```
 
-### Message Queue
-```bash
-python messagingqueue.py
+## How to run the examples
+
+Smarthome GUI (desktop)
+```powershell
+python smarthome/ui.smarthome.py
 ```
 
-## Time Complexity
-### Stack Operations
-- Push: O(1)
-- Pop: O(1)
-- Peek: O(1)
-- isEmpty: O(1)
+Smarthome CLI
+```powershell
+python smarthome/smarthome.py
+```
 
-### Queue Operations
-- Enqueue: O(1)
-- Dequeue: O(1)
-- Display: O(n)
-- isEmpty: O(1)
+Stack (linked-list implementation)
+```powershell
+python stack/stack_linked_list.py
+```
+
+Messaging Queue (console)
+```powershell
+python messagingqueue/messagingqueue.py
+```
+
+Other example scripts can be run in a similar way from their folders.
+
+## Notes
+- I added a `.gitignore` to exclude archives and `__pycache__`. If you need files ignored differently, update `.gitignore`.
+- The repository contains small demo programs; feel free to reorganize per-project or extract into separate repos if you prefer.
 
 ## Contributing
-Feel free to submit issues and enhancement requests!
+- Create a branch for a feature (e.g., `feature/smarthome-improvements`), then open a pull request.
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License — see the `LICENSE` file.
 
 ## Author
 [rahul200618](https://github.com/rahul200618)
